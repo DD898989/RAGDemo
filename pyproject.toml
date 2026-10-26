@@ -1,0 +1,18 @@
+[project]
+name = "myrag"
+version = "0.1.0"
+description = "RAG (Retrieval-Augmented Generation) 知識庫檢索與生成實作"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "faiss-cpu>=1.8.0",
+    "langchain>=0.2.0",
+    "langchain-community>=0.2.0",
+    "langchain-google-genai>=1.0.0",
+    "langchain-text-splitters>=0.2.0",
+    "pypdf>=4.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.uv]
+package = false
