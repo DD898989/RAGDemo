@@ -61,7 +61,7 @@ GOOGLE_API_KEY=您的_Google_API_Key
 - 自動偵測 `uv` 或 `python`。
 - 自動建立虛擬環境與安裝相依套件。
 - 自動由 `.env` 載入 `GOOGLE_API_KEY`。
-- 依序展示 Step 1 ~ Step 5，最後進入**即時互動問答模式**！
+- 依序展示 Step 1 ~ Step 4，最後進入**即時互動問答模式**！
 
 ### 方式二：使用命令列執行
 
@@ -72,7 +72,7 @@ uv run python main.py
 # 或使用原生 Python
 python -m venv .venv
 .venv\Scripts\activate
-pip install -r requirements.txt  # 或 uv sync
+pip install langchain langchain-community langchain-google-genai langchain-text-splitters faiss-cpu python-dotenv
 python main.py
 ```
 
@@ -83,7 +83,7 @@ python main.py
 本專案支援使用 `uv` 快速管理套件：
 
 ```bash
-uv add langchain langchain-community langchain-google-genai langchain-text-splitters faiss-cpu pypdf python-dotenv
+uv add langchain langchain-community langchain-google-genai langchain-text-splitters faiss-cpu python-dotenv
 ```
 
 ---
@@ -213,7 +213,7 @@ for doc in result["source_documents"]:
 ## 📁 專案檔案清單
 
 - **`RUN.bat`**：Windows 一鍵執行批次檔（支援 UTF-8、自動偵測環境與啟動）
-- **`main.py`**：Google Gemini + FAISS 完整 5 步驟 RAG 實作與即時互動終端
+- **`main.py`**：Google Gemini + FAISS 完整 RAG 實作與即時互動終端
 - **`pyproject.toml`**：uv 專案設定與 Python 相依性清單
 - **`.env.example`**：環境變數設定範例檔
 - **`.gitignore`**：Git 忽略規則，自動過濾虛擬環境與金鑰檔案

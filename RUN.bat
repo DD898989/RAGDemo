@@ -31,7 +31,7 @@ if not exist ".venv" (
     call .venv\Scripts\activate.bat
     echo [資訊] 正在安裝相依套件
     python -m pip install --upgrade pip
-    pip install langchain langchain-community langchain-google-genai langchain-text-splitters faiss-cpu pypdf python-dotenv
+    pip install langchain langchain-community langchain-google-genai langchain-text-splitters faiss-cpu python-dotenv
 ) else (
     call .venv\Scripts\activate.bat
 )
